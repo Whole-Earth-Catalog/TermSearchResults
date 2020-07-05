@@ -1,4 +1,4 @@
-console.log("Beginning js script 7:48")
+console.log("Beginning js script 7:59")
 var term_keys = []
 $.getJSON("../data/keys_by_decade.json", function (data) {
     console("in json")
@@ -44,7 +44,7 @@ var svg = d3
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Define dataset
-d3.json("TermSearchResults/data/keys_by_decade.json", function (data) {
+d3.json("../data/keys_by_decade.json", function (data) {
     console.log("reading from json...")
     console.log(data)
     // set color domain
