@@ -5,6 +5,8 @@ var margin = { top: 20, right: 80, bottom: 30, left: 50 },
         parseInt(d3.select("#chart").style("width")) - margin.left - margin.right,
     height =
         parseInt(d3.select("#chart").style("height")) - margin.top - margin.bottom;
+// Parse the year
+var parseYear = d3.timeParse("%Y");
 // Define scales
 var xScale = d3.scaleTime().range([0, width]);
 var yScale = d3.scaleLinear().range([height, 0]);
@@ -31,10 +33,10 @@ var svg = d3
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Define dataset
-d3.json("data/keys_by_decade.json", function (data) {
+d3.json("/TermSearchResults/data/keys_by_decade.json", function (data) {
     // format data
     data.forEach(function (d) {
-        d.decade = +d.decade
+        d.decade = parseYear(d.decade)
         d.num_ids = +num_ids
         console.log(d)
     });
