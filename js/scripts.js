@@ -30,8 +30,13 @@ var svg = d3
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-// Define Draw Function
-d3.json("../data/keys_by_decade.json", function (data) {
-    // set color domain
-    console.log(data)
+// Define dataset
+d3.json("../data/keys_by_decade.json", function (error, data) {
+    // format data
+    data.forEach(function (d) {
+        d.decade = +d.decade
+        d.num_ids = +num_ids
+        console.log(d)
+    });
+
 });
