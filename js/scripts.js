@@ -1,7 +1,12 @@
 console.log("Beginning js script 7:48")
+var term_keys = []
 $.getJSON("../data/keys_by_decade.json", function (data) {
-    $.forEach(result, function (d) {
+    console("in json")
+    $.each(data, function (d) {
         console.log(d.term_key)
+        if ($.inArray(d.term_key, term_keys) === -1) {
+            term_keys.push(d.term_key)
+        }
     });
 });
 
@@ -43,7 +48,7 @@ d3.json("TermSearchResults/data/keys_by_decade.json", function (data) {
     console.log("reading from json...")
     console.log(data)
     // set color domain
-
+   
     // format data
     data.forEach(function (d) {
         d.decade = parseYear(d.decade)
