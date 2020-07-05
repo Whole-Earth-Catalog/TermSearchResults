@@ -1,3 +1,4 @@
+console.log("Beginning js script")
 // Define margins
 var margin = { top: 20, right: 80, bottom: 30, left: 50 },
     width =
