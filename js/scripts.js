@@ -46,3 +46,4 @@ d3.json("/TermSearchResults/data/keys_by_decade.json", function (data) {
     
 
 });
+console.log("end of script")
