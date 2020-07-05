@@ -1,425 +1,2122 @@
-term_key,"CONCAT(decade, '0')",num_ids
-Enlightenment,1510,1
-Enlightenment,1530,1
-Enlightenment,1540,6
-Enlightenment,1550,6
-Enlightenment,1560,9
-Enlightenment,1570,17
-Enlightenment,1580,9
-Enlightenment,1590,13
-Enlightenment,1600,23
-Enlightenment,1610,32
-Enlightenment,1620,22
-Enlightenment,1630,18
-Enlightenment,1640,21
-Enlightenment,1650,18
-Enlightenment,1660,35
-Enlightenment,1670,15
-Enlightenment,1680,28
-Enlightenment,1690,14
-Enlightenment,1700,8
-Enlightenment,1710,10
-Enlightenment,1720,16
-Enlightenment,1730,12
-Enlightenment,1740,2
-Enlightenment,1750,10
-Enlightenment,1760,8
-Enlightenment,1770,2
-Enlightenment,1780,15
-Enlightenment,1790,16
-Enlightenment,17u0,2
-Enlightenment,1800,3
-justice,1500,9
-justice,1510,21
-justice,1520,42
-justice,1530,83
-justice,1540,60
-justice,1550,154
-justice,1560,58
-justice,1570,65
-justice,1580,81
-justice,1590,74
-justice,15u0,4
-justice,1600,90
-justice,1610,114
-justice,1620,96
-justice,1630,197
-justice,1640,1106
-justice,1650,1260
-justice,1660,854
-justice,1670,832
-justice,1680,1445
-justice,1690,603
-justice,16u0,6
-justice,1700,874
-justice,1710,1381
-justice,1720,961
-justice,1730,1239
-justice,1740,775
-justice,1750,917
-justice,1760,858
-justice,1770,2531
-justice,1780,2094
-justice,1790,3253
-justice,17u0,28
-justice,1800,227
-"king, queen",1500,447
-"king, queen",1510,574
-"king, queen",1520,700
-"king, queen",1530,1015
-"king, queen",1540,1033
-"king, queen",1550,1138
-"king, queen",1560,1196
-"king, queen",1570,1076
-"king, queen",1580,1571
-"king, queen",1590,2120
-"king, queen",15u0,40
-"king, queen",1600,2544
-"king, queen",1610,2622
-"king, queen",1620,3340
-"king, queen",1630,2576
-"king, queen",1640,7286
-"king, queen",1650,3745
-"king, queen",1660,4991
-"king, queen",1670,3368
-"king, queen",1680,8606
-"king, queen",1690,8272
-"king, queen",16u0,113
-"king, queen",1700,6019
-"king, queen",1710,6399
-"king, queen",1720,4250
-"king, queen",1730,4594
-"king, queen",1740,4976
-"king, queen",1750,5456
-"king, queen",1760,5909
-"king, queen",1770,6352
-"king, queen",1780,10398
-"king, queen",1790,9188
-"king, queen",17u0,245
-"king, queen",1800,650
-law,1500,58
-law,1510,69
-law,1520,370
-law,1530,177
-law,1540,160
-law,1550,229
-law,1560,175
-law,1570,238
-law,1580,203
-law,1590,269
-law,15u0,8
-law,1600,414
-law,1610,399
-law,1620,471
-law,1630,398
-law,1640,926
-law,1650,1301
-law,1660,999
-law,1670,890
-law,1680,1330
-law,1690,904
-law,16u0,29
-law,1700,1143
-law,1710,1429
-law,1720,1402
-law,1730,1339
-law,1740,1212
-law,1750,1548
-law,1760,1513
-law,1770,1842
-law,1780,2565
-law,1790,9079
-law,17u0,61
-law,1800,903
-monarchy,1500,12
-monarchy,1510,14
-monarchy,1530,12
-monarchy,1540,21
-monarchy,1550,46
-monarchy,1560,46
-monarchy,1570,62
-monarchy,1580,77
-monarchy,1590,51
-monarchy,1600,75
-monarchy,1610,243
-monarchy,1620,390
-monarchy,1630,315
-monarchy,1640,311
-monarchy,1650,588
-monarchy,1660,444
-monarchy,1670,269
-monarchy,1680,527
-monarchy,1690,301
-monarchy,16u0,11
-monarchy,1700,430
-monarchy,1710,458
-monarchy,1720,531
-monarchy,1730,250
-monarchy,1740,280
-monarchy,1750,295
-monarchy,1760,248
-monarchy,1770,359
-monarchy,1780,819
-monarchy,1790,1061
-monarchy,17u0,18
-monarchy,1800,40
-"nation, people",1500,51
-"nation, people",1510,40
-"nation, people",1520,499
-"nation, people",1530,202
-"nation, people",1540,285
-"nation, people",1550,186
-"nation, people",1560,286
-"nation, people",1570,272
-"nation, people",1580,515
-"nation, people",1590,399
-"nation, people",15u0,28
-"nation, people",1600,395
-"nation, people",1610,298
-"nation, people",1620,422
-"nation, people",1630,381
-"nation, people",1640,2632
-"nation, people",1650,4290
-"nation, people",1660,2897
-"nation, people",1670,1751
-"nation, people",1680,2447
-"nation, people",1690,3025
-"nation, people",16u0,21
-"nation, people",1700,2685
-"nation, people",1710,3182
-"nation, people",1720,2851
-"nation, people",1730,2660
-"nation, people",1740,4188
-"nation, people",1750,4755
-"nation, people",1760,3718
-"nation, people",1770,4422
-"nation, people",1780,8769
-"nation, people",1790,19022
-"nation, people",17u0,85
-"nation, people",1800,1019
-philosophy,1500,182
-philosophy,1510,124
-philosophy,1520,54
-philosophy,1530,18
-philosophy,1540,13
-philosophy,1550,169
-philosophy,1560,139
-philosophy,1570,196
-philosophy,1580,241
-philosophy,1590,145
-philosophy,15u0,6
-philosophy,1600,174
-philosophy,1610,196
-philosophy,1620,203
-philosophy,1630,265
-philosophy,1640,170
-philosophy,1650,369
-philosophy,1660,405
-philosophy,1670,423
-philosophy,1680,350
-philosophy,1690,354
-philosophy,16u0,15
-philosophy,1700,280
-philosophy,1710,203
-philosophy,1720,444
-philosophy,1730,667
-philosophy,1740,701
-philosophy,1750,804
-philosophy,1760,726
-philosophy,1770,982
-philosophy,1780,1251
-philosophy,1790,1850
-philosophy,17u0,24
-philosophy,1800,250
-republic,1500,38
-republic,1510,14
-republic,1520,37
-republic,1530,33
-republic,1540,158
-republic,1550,265
-republic,1560,151
-republic,1570,281
-republic,1580,324
-republic,1590,213
-republic,15u0,3
-republic,1600,507
-republic,1610,405
-republic,1620,339
-republic,1630,315
-republic,1640,489
-republic,1650,1594
-republic,1660,349
-republic,1670,357
-republic,1680,441
-republic,1690,214
-republic,16u0,16
-republic,1700,269
-republic,1710,196
-republic,1720,315
-republic,1730,301
-republic,1740,285
-republic,1750,279
-republic,1760,305
-republic,1770,379
-republic,1780,2011
-republic,1790,3422
-republic,17u0,17
-republic,1800,273
-revolution,1540,9
-revolution,1550,9
-revolution,1580,3
-revolution,1610,3
-revolution,1620,2
-revolution,1630,12
-revolution,1640,81
-revolution,1650,105
-revolution,1660,3
-revolution,1670,159
-revolution,1680,396
-revolution,1690,602
-revolution,1700,618
-revolution,1710,999
-revolution,1720,502
-revolution,1730,191
-revolution,1740,650
-revolution,1750,467
-revolution,1760,599
-revolution,1770,968
-revolution,1780,2295
-revolution,1790,7871
-revolution,17u0,22
-revolution,1800,453
-right,1500,194
-right,1510,314
-right,1520,1441
-right,1530,748
-right,1540,675
-right,1550,1025
-right,1560,914
-right,1570,1375
-right,1580,1768
-right,1590,1507
-right,15u0,42
-right,1600,1495
-right,1610,1649
-right,1620,1370
-right,1630,1255
-right,1640,6222
-right,1650,2664
-right,1660,2189
-right,1670,2052
-right,1680,3796
-right,1690,2809
-right,16u0,51
-right,1700,4676
-right,1710,4577
-right,1720,3732
-right,1730,4538
-right,1740,5451
-right,1750,4845
-right,1760,8123
-right,1770,6075
-right,1780,6427
-right,1790,10940
-right,17u0,89
-right,1800,782
-science,1500,32
-science,1510,18
-science,1520,61
-science,1530,55
-science,1540,72
-science,1550,70
-science,1560,99
-science,1570,126
-science,1580,106
-science,1590,85
-science,15u0,2
-science,1600,73
-science,1610,80
-science,1620,73
-science,1630,106
-science,1640,179
-science,1650,247
-science,1660,312
-science,1670,270
-science,1680,205
-science,1690,271
-science,16u0,3
-science,1700,145
-science,1710,266
-science,1720,385
-science,1730,316
-science,1740,301
-science,1750,454
-science,1760,399
-science,1770,766
-science,1780,845
-science,1790,1269
-science,17u0,12
-science,1800,247
-state,1500,14
-state,1510,2
-state,1520,30
-state,1530,38
-state,1540,152
-state,1550,161
-state,1560,102
-state,1570,278
-state,1580,300
-state,1590,383
-state,15u0,4
-state,1600,510
-state,1610,503
-state,1620,786
-state,1630,619
-state,1640,2190
-state,1650,1851
-state,1660,1235
-state,1670,2129
-state,1680,2924
-state,1690,2505
-state,16u0,33
-state,1700,2882
-state,1710,3510
-state,1720,2688
-state,1730,3176
-state,1740,3449
-state,1750,3549
-state,1760,3325
-state,1770,7055
-state,1780,15811
-state,1790,21960
-state,17u0,69
-state,1800,2371
-violence,1500,6
-violence,1510,11
-violence,1520,95
-violence,1530,46
-violence,1540,16
-violence,1550,27
-violence,1560,23
-violence,1570,14
-violence,1580,21
-violence,1590,23
-violence,15u0,6
-violence,1600,8
-violence,1610,30
-violence,1620,14
-violence,1630,20
-violence,1640,107
-violence,1650,83
-violence,1660,32
-violence,1670,61
-violence,1680,38
-violence,1690,62
-violence,1700,24
-violence,1710,43
-violence,1720,11
-violence,1730,31
-violence,1740,49
-violence,1750,47
-violence,1760,30
-violence,1770,34
-violence,1780,88
-violence,1790,180
-violence,17u0,2
+[
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1510",
+		"num_ids" : 1
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1530",
+		"num_ids" : 1
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1540",
+		"num_ids" : 6
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1550",
+		"num_ids" : 6
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1560",
+		"num_ids" : 9
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1570",
+		"num_ids" : 17
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1580",
+		"num_ids" : 9
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1590",
+		"num_ids" : 13
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1600",
+		"num_ids" : 23
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1610",
+		"num_ids" : 32
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1620",
+		"num_ids" : 22
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1630",
+		"num_ids" : 18
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1640",
+		"num_ids" : 21
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1650",
+		"num_ids" : 18
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1660",
+		"num_ids" : 35
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1670",
+		"num_ids" : 15
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1680",
+		"num_ids" : 28
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1690",
+		"num_ids" : 14
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1700",
+		"num_ids" : 8
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1710",
+		"num_ids" : 10
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1720",
+		"num_ids" : 16
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1730",
+		"num_ids" : 12
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1740",
+		"num_ids" : 2
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1750",
+		"num_ids" : 10
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1760",
+		"num_ids" : 8
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1770",
+		"num_ids" : 2
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1780",
+		"num_ids" : 15
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1790",
+		"num_ids" : 16
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "17u0",
+		"num_ids" : 2
+	},
+	{
+		"term_key" : "Enlightenment",
+		"decade" : "1800",
+		"num_ids" : 3
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1500",
+		"num_ids" : 9
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1510",
+		"num_ids" : 21
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1520",
+		"num_ids" : 42
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1530",
+		"num_ids" : 83
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1540",
+		"num_ids" : 60
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1550",
+		"num_ids" : 154
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1560",
+		"num_ids" : 58
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1570",
+		"num_ids" : 65
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1580",
+		"num_ids" : 81
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1590",
+		"num_ids" : 74
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "15u0",
+		"num_ids" : 4
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1600",
+		"num_ids" : 90
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1610",
+		"num_ids" : 114
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1620",
+		"num_ids" : 96
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1630",
+		"num_ids" : 197
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1640",
+		"num_ids" : 1106
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1650",
+		"num_ids" : 1260
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1660",
+		"num_ids" : 854
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1670",
+		"num_ids" : 832
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1680",
+		"num_ids" : 1445
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1690",
+		"num_ids" : 603
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "16u0",
+		"num_ids" : 6
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1700",
+		"num_ids" : 874
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1710",
+		"num_ids" : 1381
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1720",
+		"num_ids" : 961
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1730",
+		"num_ids" : 1239
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1740",
+		"num_ids" : 775
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1750",
+		"num_ids" : 917
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1760",
+		"num_ids" : 858
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1770",
+		"num_ids" : 2531
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1780",
+		"num_ids" : 2094
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1790",
+		"num_ids" : 3253
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "17u0",
+		"num_ids" : 28
+	},
+	{
+		"term_key" : "justice",
+		"decade" : "1800",
+		"num_ids" : 227
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1500",
+		"num_ids" : 447
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1510",
+		"num_ids" : 574
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1520",
+		"num_ids" : 700
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1530",
+		"num_ids" : 1015
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1540",
+		"num_ids" : 1033
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1550",
+		"num_ids" : 1138
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1560",
+		"num_ids" : 1196
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1570",
+		"num_ids" : 1076
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1580",
+		"num_ids" : 1571
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1590",
+		"num_ids" : 2120
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "15u0",
+		"num_ids" : 40
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1600",
+		"num_ids" : 2544
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1610",
+		"num_ids" : 2622
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1620",
+		"num_ids" : 3340
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1630",
+		"num_ids" : 2576
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1640",
+		"num_ids" : 7286
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1650",
+		"num_ids" : 3745
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1660",
+		"num_ids" : 4991
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1670",
+		"num_ids" : 3368
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1680",
+		"num_ids" : 8606
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1690",
+		"num_ids" : 8272
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "16u0",
+		"num_ids" : 113
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1700",
+		"num_ids" : 6019
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1710",
+		"num_ids" : 6399
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1720",
+		"num_ids" : 4250
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1730",
+		"num_ids" : 4594
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1740",
+		"num_ids" : 4976
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1750",
+		"num_ids" : 5456
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1760",
+		"num_ids" : 5909
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1770",
+		"num_ids" : 6352
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1780",
+		"num_ids" : 10398
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1790",
+		"num_ids" : 9188
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "17u0",
+		"num_ids" : 245
+	},
+	{
+		"term_key" : "king, queen",
+		"decade" : "1800",
+		"num_ids" : 650
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1500",
+		"num_ids" : 58
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1510",
+		"num_ids" : 69
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1520",
+		"num_ids" : 370
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1530",
+		"num_ids" : 177
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1540",
+		"num_ids" : 160
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1550",
+		"num_ids" : 229
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1560",
+		"num_ids" : 175
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1570",
+		"num_ids" : 238
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1580",
+		"num_ids" : 203
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1590",
+		"num_ids" : 269
+	},
+	{
+		"term_key" : "law",
+		"decade" : "15u0",
+		"num_ids" : 8
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1600",
+		"num_ids" : 414
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1610",
+		"num_ids" : 399
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1620",
+		"num_ids" : 471
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1630",
+		"num_ids" : 398
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1640",
+		"num_ids" : 926
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1650",
+		"num_ids" : 1301
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1660",
+		"num_ids" : 999
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1670",
+		"num_ids" : 890
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1680",
+		"num_ids" : 1330
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1690",
+		"num_ids" : 904
+	},
+	{
+		"term_key" : "law",
+		"decade" : "16u0",
+		"num_ids" : 29
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1700",
+		"num_ids" : 1143
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1710",
+		"num_ids" : 1429
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1720",
+		"num_ids" : 1402
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1730",
+		"num_ids" : 1339
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1740",
+		"num_ids" : 1212
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1750",
+		"num_ids" : 1548
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1760",
+		"num_ids" : 1513
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1770",
+		"num_ids" : 1842
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1780",
+		"num_ids" : 2565
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1790",
+		"num_ids" : 9079
+	},
+	{
+		"term_key" : "law",
+		"decade" : "17u0",
+		"num_ids" : 61
+	},
+	{
+		"term_key" : "law",
+		"decade" : "1800",
+		"num_ids" : 903
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1500",
+		"num_ids" : 12
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1510",
+		"num_ids" : 14
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1530",
+		"num_ids" : 12
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1540",
+		"num_ids" : 21
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1550",
+		"num_ids" : 46
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1560",
+		"num_ids" : 46
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1570",
+		"num_ids" : 62
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1580",
+		"num_ids" : 77
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1590",
+		"num_ids" : 51
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1600",
+		"num_ids" : 75
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1610",
+		"num_ids" : 243
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1620",
+		"num_ids" : 390
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1630",
+		"num_ids" : 315
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1640",
+		"num_ids" : 311
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1650",
+		"num_ids" : 588
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1660",
+		"num_ids" : 444
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1670",
+		"num_ids" : 269
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1680",
+		"num_ids" : 527
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1690",
+		"num_ids" : 301
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "16u0",
+		"num_ids" : 11
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1700",
+		"num_ids" : 430
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1710",
+		"num_ids" : 458
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1720",
+		"num_ids" : 531
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1730",
+		"num_ids" : 250
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1740",
+		"num_ids" : 280
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1750",
+		"num_ids" : 295
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1760",
+		"num_ids" : 248
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1770",
+		"num_ids" : 359
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1780",
+		"num_ids" : 819
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1790",
+		"num_ids" : 1061
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "17u0",
+		"num_ids" : 18
+	},
+	{
+		"term_key" : "monarchy",
+		"decade" : "1800",
+		"num_ids" : 40
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1500",
+		"num_ids" : 51
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1510",
+		"num_ids" : 40
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1520",
+		"num_ids" : 499
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1530",
+		"num_ids" : 202
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1540",
+		"num_ids" : 285
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1550",
+		"num_ids" : 186
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1560",
+		"num_ids" : 286
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1570",
+		"num_ids" : 272
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1580",
+		"num_ids" : 515
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1590",
+		"num_ids" : 399
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "15u0",
+		"num_ids" : 28
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1600",
+		"num_ids" : 395
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1610",
+		"num_ids" : 298
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1620",
+		"num_ids" : 422
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1630",
+		"num_ids" : 381
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1640",
+		"num_ids" : 2632
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1650",
+		"num_ids" : 4290
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1660",
+		"num_ids" : 2897
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1670",
+		"num_ids" : 1751
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1680",
+		"num_ids" : 2447
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1690",
+		"num_ids" : 3025
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "16u0",
+		"num_ids" : 21
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1700",
+		"num_ids" : 2685
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1710",
+		"num_ids" : 3182
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1720",
+		"num_ids" : 2851
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1730",
+		"num_ids" : 2660
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1740",
+		"num_ids" : 4188
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1750",
+		"num_ids" : 4755
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1760",
+		"num_ids" : 3718
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1770",
+		"num_ids" : 4422
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1780",
+		"num_ids" : 8769
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1790",
+		"num_ids" : 19022
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "17u0",
+		"num_ids" : 85
+	},
+	{
+		"term_key" : "nation, people",
+		"decade" : "1800",
+		"num_ids" : 1019
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1500",
+		"num_ids" : 182
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1510",
+		"num_ids" : 124
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1520",
+		"num_ids" : 54
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1530",
+		"num_ids" : 18
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1540",
+		"num_ids" : 13
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1550",
+		"num_ids" : 169
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1560",
+		"num_ids" : 139
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1570",
+		"num_ids" : 196
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1580",
+		"num_ids" : 241
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1590",
+		"num_ids" : 145
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "15u0",
+		"num_ids" : 6
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1600",
+		"num_ids" : 174
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1610",
+		"num_ids" : 196
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1620",
+		"num_ids" : 203
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1630",
+		"num_ids" : 265
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1640",
+		"num_ids" : 170
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1650",
+		"num_ids" : 369
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1660",
+		"num_ids" : 405
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1670",
+		"num_ids" : 423
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1680",
+		"num_ids" : 350
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1690",
+		"num_ids" : 354
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "16u0",
+		"num_ids" : 15
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1700",
+		"num_ids" : 280
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1710",
+		"num_ids" : 203
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1720",
+		"num_ids" : 444
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1730",
+		"num_ids" : 667
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1740",
+		"num_ids" : 701
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1750",
+		"num_ids" : 804
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1760",
+		"num_ids" : 726
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1770",
+		"num_ids" : 982
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1780",
+		"num_ids" : 1251
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1790",
+		"num_ids" : 1850
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "17u0",
+		"num_ids" : 24
+	},
+	{
+		"term_key" : "philosophy",
+		"decade" : "1800",
+		"num_ids" : 250
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1500",
+		"num_ids" : 38
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1510",
+		"num_ids" : 14
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1520",
+		"num_ids" : 37
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1530",
+		"num_ids" : 33
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1540",
+		"num_ids" : 158
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1550",
+		"num_ids" : 265
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1560",
+		"num_ids" : 151
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1570",
+		"num_ids" : 281
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1580",
+		"num_ids" : 324
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1590",
+		"num_ids" : 213
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "15u0",
+		"num_ids" : 3
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1600",
+		"num_ids" : 507
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1610",
+		"num_ids" : 405
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1620",
+		"num_ids" : 339
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1630",
+		"num_ids" : 315
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1640",
+		"num_ids" : 489
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1650",
+		"num_ids" : 1594
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1660",
+		"num_ids" : 349
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1670",
+		"num_ids" : 357
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1680",
+		"num_ids" : 441
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1690",
+		"num_ids" : 214
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "16u0",
+		"num_ids" : 16
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1700",
+		"num_ids" : 269
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1710",
+		"num_ids" : 196
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1720",
+		"num_ids" : 315
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1730",
+		"num_ids" : 301
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1740",
+		"num_ids" : 285
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1750",
+		"num_ids" : 279
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1760",
+		"num_ids" : 305
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1770",
+		"num_ids" : 379
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1780",
+		"num_ids" : 2011
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1790",
+		"num_ids" : 3422
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "17u0",
+		"num_ids" : 17
+	},
+	{
+		"term_key" : "republic",
+		"decade" : "1800",
+		"num_ids" : 273
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1540",
+		"num_ids" : 9
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1550",
+		"num_ids" : 9
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1580",
+		"num_ids" : 3
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1610",
+		"num_ids" : 3
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1620",
+		"num_ids" : 2
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1630",
+		"num_ids" : 12
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1640",
+		"num_ids" : 81
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1650",
+		"num_ids" : 105
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1660",
+		"num_ids" : 3
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1670",
+		"num_ids" : 159
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1680",
+		"num_ids" : 396
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1690",
+		"num_ids" : 602
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1700",
+		"num_ids" : 618
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1710",
+		"num_ids" : 999
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1720",
+		"num_ids" : 502
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1730",
+		"num_ids" : 191
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1740",
+		"num_ids" : 650
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1750",
+		"num_ids" : 467
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1760",
+		"num_ids" : 599
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1770",
+		"num_ids" : 968
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1780",
+		"num_ids" : 2295
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1790",
+		"num_ids" : 7871
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "17u0",
+		"num_ids" : 22
+	},
+	{
+		"term_key" : "revolution",
+		"decade" : "1800",
+		"num_ids" : 453
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1500",
+		"num_ids" : 194
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1510",
+		"num_ids" : 314
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1520",
+		"num_ids" : 1441
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1530",
+		"num_ids" : 748
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1540",
+		"num_ids" : 675
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1550",
+		"num_ids" : 1025
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1560",
+		"num_ids" : 914
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1570",
+		"num_ids" : 1375
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1580",
+		"num_ids" : 1768
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1590",
+		"num_ids" : 1507
+	},
+	{
+		"term_key" : "right",
+		"decade" : "15u0",
+		"num_ids" : 42
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1600",
+		"num_ids" : 1495
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1610",
+		"num_ids" : 1649
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1620",
+		"num_ids" : 1370
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1630",
+		"num_ids" : 1255
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1640",
+		"num_ids" : 6222
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1650",
+		"num_ids" : 2664
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1660",
+		"num_ids" : 2189
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1670",
+		"num_ids" : 2052
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1680",
+		"num_ids" : 3796
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1690",
+		"num_ids" : 2809
+	},
+	{
+		"term_key" : "right",
+		"decade" : "16u0",
+		"num_ids" : 51
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1700",
+		"num_ids" : 4676
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1710",
+		"num_ids" : 4577
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1720",
+		"num_ids" : 3732
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1730",
+		"num_ids" : 4538
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1740",
+		"num_ids" : 5451
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1750",
+		"num_ids" : 4845
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1760",
+		"num_ids" : 8123
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1770",
+		"num_ids" : 6075
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1780",
+		"num_ids" : 6427
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1790",
+		"num_ids" : 10940
+	},
+	{
+		"term_key" : "right",
+		"decade" : "17u0",
+		"num_ids" : 89
+	},
+	{
+		"term_key" : "right",
+		"decade" : "1800",
+		"num_ids" : 782
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1500",
+		"num_ids" : 32
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1510",
+		"num_ids" : 18
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1520",
+		"num_ids" : 61
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1530",
+		"num_ids" : 55
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1540",
+		"num_ids" : 72
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1550",
+		"num_ids" : 70
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1560",
+		"num_ids" : 99
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1570",
+		"num_ids" : 126
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1580",
+		"num_ids" : 106
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1590",
+		"num_ids" : 85
+	},
+	{
+		"term_key" : "science",
+		"decade" : "15u0",
+		"num_ids" : 2
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1600",
+		"num_ids" : 73
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1610",
+		"num_ids" : 80
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1620",
+		"num_ids" : 73
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1630",
+		"num_ids" : 106
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1640",
+		"num_ids" : 179
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1650",
+		"num_ids" : 247
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1660",
+		"num_ids" : 312
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1670",
+		"num_ids" : 270
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1680",
+		"num_ids" : 205
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1690",
+		"num_ids" : 271
+	},
+	{
+		"term_key" : "science",
+		"decade" : "16u0",
+		"num_ids" : 3
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1700",
+		"num_ids" : 145
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1710",
+		"num_ids" : 266
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1720",
+		"num_ids" : 385
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1730",
+		"num_ids" : 316
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1740",
+		"num_ids" : 301
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1750",
+		"num_ids" : 454
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1760",
+		"num_ids" : 399
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1770",
+		"num_ids" : 766
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1780",
+		"num_ids" : 845
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1790",
+		"num_ids" : 1269
+	},
+	{
+		"term_key" : "science",
+		"decade" : "17u0",
+		"num_ids" : 12
+	},
+	{
+		"term_key" : "science",
+		"decade" : "1800",
+		"num_ids" : 247
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1500",
+		"num_ids" : 14
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1510",
+		"num_ids" : 2
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1520",
+		"num_ids" : 30
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1530",
+		"num_ids" : 38
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1540",
+		"num_ids" : 152
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1550",
+		"num_ids" : 161
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1560",
+		"num_ids" : 102
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1570",
+		"num_ids" : 278
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1580",
+		"num_ids" : 300
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1590",
+		"num_ids" : 383
+	},
+	{
+		"term_key" : "state",
+		"decade" : "15u0",
+		"num_ids" : 4
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1600",
+		"num_ids" : 510
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1610",
+		"num_ids" : 503
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1620",
+		"num_ids" : 786
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1630",
+		"num_ids" : 619
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1640",
+		"num_ids" : 2190
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1650",
+		"num_ids" : 1851
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1660",
+		"num_ids" : 1235
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1670",
+		"num_ids" : 2129
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1680",
+		"num_ids" : 2924
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1690",
+		"num_ids" : 2505
+	},
+	{
+		"term_key" : "state",
+		"decade" : "16u0",
+		"num_ids" : 33
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1700",
+		"num_ids" : 2882
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1710",
+		"num_ids" : 3510
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1720",
+		"num_ids" : 2688
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1730",
+		"num_ids" : 3176
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1740",
+		"num_ids" : 3449
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1750",
+		"num_ids" : 3549
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1760",
+		"num_ids" : 3325
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1770",
+		"num_ids" : 7055
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1780",
+		"num_ids" : 15811
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1790",
+		"num_ids" : 21960
+	},
+	{
+		"term_key" : "state",
+		"decade" : "17u0",
+		"num_ids" : 69
+	},
+	{
+		"term_key" : "state",
+		"decade" : "1800",
+		"num_ids" : 2371
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1500",
+		"num_ids" : 6
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1510",
+		"num_ids" : 11
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1520",
+		"num_ids" : 95
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1530",
+		"num_ids" : 46
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1540",
+		"num_ids" : 16
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1550",
+		"num_ids" : 27
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1560",
+		"num_ids" : 23
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1570",
+		"num_ids" : 14
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1580",
+		"num_ids" : 21
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1590",
+		"num_ids" : 23
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "15u0",
+		"num_ids" : 6
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1600",
+		"num_ids" : 8
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1610",
+		"num_ids" : 30
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1620",
+		"num_ids" : 14
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1630",
+		"num_ids" : 20
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1640",
+		"num_ids" : 107
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1650",
+		"num_ids" : 83
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1660",
+		"num_ids" : 32
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1670",
+		"num_ids" : 61
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1680",
+		"num_ids" : 38
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1690",
+		"num_ids" : 62
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1700",
+		"num_ids" : 24
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1710",
+		"num_ids" : 43
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1720",
+		"num_ids" : 11
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1730",
+		"num_ids" : 31
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1740",
+		"num_ids" : 49
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1750",
+		"num_ids" : 47
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1760",
+		"num_ids" : 30
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1770",
+		"num_ids" : 34
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1780",
+		"num_ids" : 88
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "1790",
+		"num_ids" : 180
+	},
+	{
+		"term_key" : "violence",
+		"decade" : "17u0",
+		"num_ids" : 2
+	}
+]
