@@ -32,5 +32,5 @@ var svg = d3
 // Define Draw Function
 d3.json("../data/keys_by_decade.json", function (data) {
     // set color domain
-    document.write(data);
+    console.log(data)
 });
