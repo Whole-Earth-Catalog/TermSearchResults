@@ -1,0 +1,425 @@
+term_key,"CONCAT(decade, '0')",num_ids
+Enlightenment,1510,1
+Enlightenment,1530,1
+Enlightenment,1540,6
+Enlightenment,1550,6
+Enlightenment,1560,9
+Enlightenment,1570,17
+Enlightenment,1580,9
+Enlightenment,1590,13
+Enlightenment,1600,23
+Enlightenment,1610,32
+Enlightenment,1620,22
+Enlightenment,1630,18
+Enlightenment,1640,21
+Enlightenment,1650,18
+Enlightenment,1660,35
+Enlightenment,1670,15
+Enlightenment,1680,28
+Enlightenment,1690,14
+Enlightenment,1700,8
+Enlightenment,1710,10
+Enlightenment,1720,16
+Enlightenment,1730,12
+Enlightenment,1740,2
+Enlightenment,1750,10
+Enlightenment,1760,8
+Enlightenment,1770,2
+Enlightenment,1780,15
+Enlightenment,1790,16
+Enlightenment,17u0,2
+Enlightenment,1800,3
+justice,1500,9
+justice,1510,21
+justice,1520,42
+justice,1530,83
+justice,1540,60
+justice,1550,154
+justice,1560,58
+justice,1570,65
+justice,1580,81
+justice,1590,74
+justice,15u0,4
+justice,1600,90
+justice,1610,114
+justice,1620,96
+justice,1630,197
+justice,1640,1106
+justice,1650,1260
+justice,1660,854
+justice,1670,832
+justice,1680,1445
+justice,1690,603
+justice,16u0,6
+justice,1700,874
+justice,1710,1381
+justice,1720,961
+justice,1730,1239
+justice,1740,775
+justice,1750,917
+justice,1760,858
+justice,1770,2531
+justice,1780,2094
+justice,1790,3253
+justice,17u0,28
+justice,1800,227
+"king, queen",1500,447
+"king, queen",1510,574
+"king, queen",1520,700
+"king, queen",1530,1015
+"king, queen",1540,1033
+"king, queen",1550,1138
+"king, queen",1560,1196
+"king, queen",1570,1076
+"king, queen",1580,1571
+"king, queen",1590,2120
+"king, queen",15u0,40
+"king, queen",1600,2544
+"king, queen",1610,2622
+"king, queen",1620,3340
+"king, queen",1630,2576
+"king, queen",1640,7286
+"king, queen",1650,3745
+"king, queen",1660,4991
+"king, queen",1670,3368
+"king, queen",1680,8606
+"king, queen",1690,8272
+"king, queen",16u0,113
+"king, queen",1700,6019
+"king, queen",1710,6399
+"king, queen",1720,4250
+"king, queen",1730,4594
+"king, queen",1740,4976
+"king, queen",1750,5456
+"king, queen",1760,5909
+"king, queen",1770,6352
+"king, queen",1780,10398
+"king, queen",1790,9188
+"king, queen",17u0,245
+"king, queen",1800,650
+law,1500,58
+law,1510,69
+law,1520,370
+law,1530,177
+law,1540,160
+law,1550,229
+law,1560,175
+law,1570,238
+law,1580,203
+law,1590,269
+law,15u0,8
+law,1600,414
+law,1610,399
+law,1620,471
+law,1630,398
+law,1640,926
+law,1650,1301
+law,1660,999
+law,1670,890
+law,1680,1330
+law,1690,904
+law,16u0,29
+law,1700,1143
+law,1710,1429
+law,1720,1402
+law,1730,1339
+law,1740,1212
+law,1750,1548
+law,1760,1513
+law,1770,1842
+law,1780,2565
+law,1790,9079
+law,17u0,61
+law,1800,903
+monarchy,1500,12
+monarchy,1510,14
+monarchy,1530,12
+monarchy,1540,21
+monarchy,1550,46
+monarchy,1560,46
+monarchy,1570,62
+monarchy,1580,77
+monarchy,1590,51
+monarchy,1600,75
+monarchy,1610,243
+monarchy,1620,390
+monarchy,1630,315
+monarchy,1640,311
+monarchy,1650,588
+monarchy,1660,444
+monarchy,1670,269
+monarchy,1680,527
+monarchy,1690,301
+monarchy,16u0,11
+monarchy,1700,430
+monarchy,1710,458
+monarchy,1720,531
+monarchy,1730,250
+monarchy,1740,280
+monarchy,1750,295
+monarchy,1760,248
+monarchy,1770,359
+monarchy,1780,819
+monarchy,1790,1061
+monarchy,17u0,18
+monarchy,1800,40
+"nation, people",1500,51
+"nation, people",1510,40
+"nation, people",1520,499
+"nation, people",1530,202
+"nation, people",1540,285
+"nation, people",1550,186
+"nation, people",1560,286
+"nation, people",1570,272
+"nation, people",1580,515
+"nation, people",1590,399
+"nation, people",15u0,28
+"nation, people",1600,395
+"nation, people",1610,298
+"nation, people",1620,422
+"nation, people",1630,381
+"nation, people",1640,2632
+"nation, people",1650,4290
+"nation, people",1660,2897
+"nation, people",1670,1751
+"nation, people",1680,2447
+"nation, people",1690,3025
+"nation, people",16u0,21
+"nation, people",1700,2685
+"nation, people",1710,3182
+"nation, people",1720,2851
+"nation, people",1730,2660
+"nation, people",1740,4188
+"nation, people",1750,4755
+"nation, people",1760,3718
+"nation, people",1770,4422
+"nation, people",1780,8769
+"nation, people",1790,19022
+"nation, people",17u0,85
+"nation, people",1800,1019
+philosophy,1500,182
+philosophy,1510,124
+philosophy,1520,54
+philosophy,1530,18
+philosophy,1540,13
+philosophy,1550,169
+philosophy,1560,139
+philosophy,1570,196
+philosophy,1580,241
+philosophy,1590,145
+philosophy,15u0,6
+philosophy,1600,174
+philosophy,1610,196
+philosophy,1620,203
+philosophy,1630,265
+philosophy,1640,170
+philosophy,1650,369
+philosophy,1660,405
+philosophy,1670,423
+philosophy,1680,350
+philosophy,1690,354
+philosophy,16u0,15
+philosophy,1700,280
+philosophy,1710,203
+philosophy,1720,444
+philosophy,1730,667
+philosophy,1740,701
+philosophy,1750,804
+philosophy,1760,726
+philosophy,1770,982
+philosophy,1780,1251
+philosophy,1790,1850
+philosophy,17u0,24
+philosophy,1800,250
+republic,1500,38
+republic,1510,14
+republic,1520,37
+republic,1530,33
+republic,1540,158
+republic,1550,265
+republic,1560,151
+republic,1570,281
+republic,1580,324
+republic,1590,213
+republic,15u0,3
+republic,1600,507
+republic,1610,405
+republic,1620,339
+republic,1630,315
+republic,1640,489
+republic,1650,1594
+republic,1660,349
+republic,1670,357
+republic,1680,441
+republic,1690,214
+republic,16u0,16
+republic,1700,269
+republic,1710,196
+republic,1720,315
+republic,1730,301
+republic,1740,285
+republic,1750,279
+republic,1760,305
+republic,1770,379
+republic,1780,2011
+republic,1790,3422
+republic,17u0,17
+republic,1800,273
+revolution,1540,9
+revolution,1550,9
+revolution,1580,3
+revolution,1610,3
+revolution,1620,2
+revolution,1630,12
+revolution,1640,81
+revolution,1650,105
+revolution,1660,3
+revolution,1670,159
+revolution,1680,396
+revolution,1690,602
+revolution,1700,618
+revolution,1710,999
+revolution,1720,502
+revolution,1730,191
+revolution,1740,650
+revolution,1750,467
+revolution,1760,599
+revolution,1770,968
+revolution,1780,2295
+revolution,1790,7871
+revolution,17u0,22
+revolution,1800,453
+right,1500,194
+right,1510,314
+right,1520,1441
+right,1530,748
+right,1540,675
+right,1550,1025
+right,1560,914
+right,1570,1375
+right,1580,1768
+right,1590,1507
+right,15u0,42
+right,1600,1495
+right,1610,1649
+right,1620,1370
+right,1630,1255
+right,1640,6222
+right,1650,2664
+right,1660,2189
+right,1670,2052
+right,1680,3796
+right,1690,2809
+right,16u0,51
+right,1700,4676
+right,1710,4577
+right,1720,3732
+right,1730,4538
+right,1740,5451
+right,1750,4845
+right,1760,8123
+right,1770,6075
+right,1780,6427
+right,1790,10940
+right,17u0,89
+right,1800,782
+science,1500,32
+science,1510,18
+science,1520,61
+science,1530,55
+science,1540,72
+science,1550,70
+science,1560,99
+science,1570,126
+science,1580,106
+science,1590,85
+science,15u0,2
+science,1600,73
+science,1610,80
+science,1620,73
+science,1630,106
+science,1640,179
+science,1650,247
+science,1660,312
+science,1670,270
+science,1680,205
+science,1690,271
+science,16u0,3
+science,1700,145
+science,1710,266
+science,1720,385
+science,1730,316
+science,1740,301
+science,1750,454
+science,1760,399
+science,1770,766
+science,1780,845
+science,1790,1269
+science,17u0,12
+science,1800,247
+state,1500,14
+state,1510,2
+state,1520,30
+state,1530,38
+state,1540,152
+state,1550,161
+state,1560,102
+state,1570,278
+state,1580,300
+state,1590,383
+state,15u0,4
+state,1600,510
+state,1610,503
+state,1620,786
+state,1630,619
+state,1640,2190
+state,1650,1851
+state,1660,1235
+state,1670,2129
+state,1680,2924
+state,1690,2505
+state,16u0,33
+state,1700,2882
+state,1710,3510
+state,1720,2688
+state,1730,3176
+state,1740,3449
+state,1750,3549
+state,1760,3325
+state,1770,7055
+state,1780,15811
+state,1790,21960
+state,17u0,69
+state,1800,2371
+violence,1500,6
+violence,1510,11
+violence,1520,95
+violence,1530,46
+violence,1540,16
+violence,1550,27
+violence,1560,23
+violence,1570,14
+violence,1580,21
+violence,1590,23
+violence,15u0,6
+violence,1600,8
+violence,1610,30
+violence,1620,14
+violence,1630,20
+violence,1640,107
+violence,1650,83
+violence,1660,32
+violence,1670,61
+violence,1680,38
+violence,1690,62
+violence,1700,24
+violence,1710,43
+violence,1720,11
+violence,1730,31
+violence,1740,49
+violence,1750,47
+violence,1760,30
+violence,1770,34
+violence,1780,88
+violence,1790,180
+violence,17u0,2
