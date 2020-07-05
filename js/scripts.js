@@ -1,4 +1,4 @@
-console.log("Beginning js script")
+console.log("Beginning js script 7:48")
 $.getJSON("../data/keys_by_decade.json", function (data) {
     $.forEach(result, function (d) {
         console.log(d.term_key)
