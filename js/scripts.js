@@ -35,6 +35,7 @@ var svg = d3
 // Define dataset
 d3.json("/TermSearchResults/data/keys_by_decade.json", function (data) {
     console.log(JSON.stringify(data, null, 2))
+
     // format data
     data.forEach(function (d) {
         d.decade = parseYear(d.decade)
