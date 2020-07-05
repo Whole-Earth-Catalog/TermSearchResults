@@ -1,4 +1,10 @@
 console.log("Beginning js script")
+$.getJSON("../data/keys_by_decade.json", function (data) {
+    $.forEach(result, function (d) {
+        console.log(d.term_key)
+    });
+});
+
 // Define margins
 var margin = { top: 20, right: 80, bottom: 30, left: 50 },
     width =
@@ -33,7 +39,7 @@ var svg = d3
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Define dataset
-d3.json("/TermSearchResults/data/keys_by_decade.json", function (data) {
+d3.json("TermSearchResults/data/keys_by_decade.json", function (data) {
     console.log("reading from json...")
     console.log(data)
     // set color domain
