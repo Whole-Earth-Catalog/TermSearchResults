@@ -31,12 +31,13 @@ var svg = d3
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Define dataset
-d3.json("../data/keys_by_decade.json", function (error, data) {
+d3.json("data/keys_by_decade.json", function (data) {
     // format data
     data.forEach(function (d) {
         d.decade = +d.decade
         d.num_ids = +num_ids
         console.log(d)
     });
+    
 
 });
