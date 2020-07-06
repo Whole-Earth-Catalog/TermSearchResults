@@ -1,7 +1,6 @@
-console.log("Beginning js script 8:26")
+console.log("Beginning js script 8:40")
 var term_keys = []
 $.getJSON("../TermSearchResults/data/keys_by_decade.json", function (data) {
-    console.log("in json")
     $.each(data, function (d) {
         console.log(d.term_key)
         if ($.inArray(d.term_key, term_keys) === -1) {
@@ -9,7 +8,7 @@ $.getJSON("../TermSearchResults/data/keys_by_decade.json", function (data) {
         }
     });
 });
-
+console.log(term_keys)
 // Define margins
 var margin = { top: 20, right: 80, bottom: 30, left: 50 },
     width =
