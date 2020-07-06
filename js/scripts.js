@@ -1,7 +1,7 @@
-console.log("Beginning js script 8:24")
+console.log("Beginning js script 8:26")
 var term_keys = []
 $.getJSON("../TermSearchResults/data/keys_by_decade.json", function (data) {
-    console("in json")
+    console.log("in json")
     $.each(data, function (d) {
         console.log(d.term_key)
         if ($.inArray(d.term_key, term_keys) === -1) {
