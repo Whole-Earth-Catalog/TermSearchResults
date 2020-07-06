@@ -1,4 +1,4 @@
-console.log("Beginning js script 7:59")
+console.log("Beginning js script 8:21")
 var term_keys = []
 $.getJSON("../TermSearchResults/data/keys_by_decade.json", function (data) {
     console("in json")
@@ -30,10 +30,10 @@ var line = d3
     .line()
     .curve(d3.curveMonotoneX)
     .x(function (d) {
-        return xScale(d["decade"])
+        return xScale(d.decade)
     })
     .y(function (d) {
-        return yScale(d["num_ids"])
+        return yScale(d.count)
     });
 // Define svg canvas
 var svg = d3
