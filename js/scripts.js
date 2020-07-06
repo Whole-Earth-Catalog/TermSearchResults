@@ -1,4 +1,4 @@
-console.log("Beginning js script 8:21")
+console.log("Beginning js script 8:24")
 var term_keys = []
 $.getJSON("../TermSearchResults/data/keys_by_decade.json", function (data) {
     console("in json")
