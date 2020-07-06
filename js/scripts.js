@@ -1,8 +1,8 @@
-console.log("Beginning js script 8:40")
+console.log("Beginning js script 8:37")
 var term_keys = []
 $.getJSON("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/keys_by_decade.json", function (data) {
-    $.each(data, function (d) {
-        console.log(d.term_key)
+    console.log("in json")
+    $.each(data, function (i, d) {
         if ($.inArray(d.term_key, term_keys) === -1) {
             term_keys.push(d.term_key)
         }
@@ -15,10 +15,8 @@ var margin = { top: 20, right: 80, bottom: 30, left: 50 },
         parseInt(d3.select("#chart").style("width")) - margin.left - margin.right,
     height =
         parseInt(d3.select("#chart").style("height")) - margin.top - margin.bottom;
-// Parse the year
-var parseYear = d3.timeParse("%Y");
 // Define scales
-var xScale = d3.scaleTime().range([0, width]);
+var xScale = d3.scaleLinear().range([0, width]);
 var yScale = d3.scaleLinear().range([height, 0]);
 var color = d3.scaleOrdinal().range(d3.schemeCategory10);
 // Define axes
@@ -43,23 +41,24 @@ var svg = d3
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Define dataset
-d3.json("../TermSearchResults/data/keys_by_decade.json", function (data) {
+d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/keys_by_decade.json").then(function (data) {
     console.log("reading from json...")
-    console.log(data)
     // set color domain
     color.domain(term_keys)
     // format data
     data.forEach(function (d) {
-        d.decade = parseYear(d.decade)
-        d.num_ids = +num_ids
+        d.decade = Number(d.decade)
+        d.num_ids = +d.num_ids
     });
-    var key_data = term_keys.map(function (term) {
-        return {
-            term_key: term,
-            datapoints: data.map(function (d) {
-                return { decade: d.decade, count: d.num_ids };
-            })
-        }
+    var key_data = []
+    term_keys.forEach(function (key) {
+        datapoints = []
+        data.forEach(function (item) {
+            if (key == item.term_key && !isNaN(item.decade)) {
+                datapoints.push({"decade" : item.decade, "count": item.num_ids})
+            }
+        })
+        key_data.push({"term_key" : key, "datapoints" : datapoints})
     })
     console.log(key_data)
     // set domain of axes
@@ -99,7 +98,8 @@ d3.json("../TermSearchResults/data/keys_by_decade.json", function (data) {
         })
         .style("stroke", function (d) {
             return color(d.term_key);
-        });
+        })
+        .attr("fill", "none");
 
 });
 // Define responsive behavior
