@@ -1,6 +1,6 @@
 console.log("Beginning js script 8:40")
 var term_keys = []
-$.getJSON("../TermSearchResults/data/keys_by_decade.json", function (data) {
+$.getJSON("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/keys_by_decade.json", function (data) {
     $.each(data, function (d) {
         console.log(d.term_key)
         if ($.inArray(d.term_key, term_keys) === -1) {
