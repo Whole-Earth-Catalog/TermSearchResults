@@ -1,13 +1,15 @@
 console.log("Beginning js script 8:37")
-var term_keys = []
+var all_term_keys = []
 $.getJSON("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/keys_by_decade.json", function (data) {
     console.log("in json")
     $.each(data, function (i, d) {
-        if ($.inArray(d.term_key, term_keys) === -1) {
-            term_keys.push(d.term_key)
+        if ($.inArray(d.term_key, all_term_keys) === -1) {
+            all_term_keys.push(d.term_key)
         }
     });
 });
+console.log(all_term_keys)
+var term_keys = ["justice"]
 console.log(term_keys)
 // Define margins
 var margin = { top: 20, right: 80, bottom: 30, left: 50 },
