@@ -1,7 +1,11 @@
 body {
-    font: 10px sans-serif;
+    font: 10px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
-
+h1, .row {
+    font: 40px;
+    text-align: center;
+}
 .axis path,
 .axis line {
     fill: none;
@@ -18,4 +22,10 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
+}
+#key_options {
+    margin-left: 10%;
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
 }
