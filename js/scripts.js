@@ -31,13 +31,13 @@ var svg = d3
 // open data
 d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/clean_key_data.json", function (data) {
     all_term_keys = [];
-    // format data
-    data.forEach(function (row) {
+    // format data 
+    /*data.forEach(function (row) {
         all_term_keys.push(row.term_key)
-        row.forEach(function (d) {
+        row.datapoints.forEach(function (d) {
             d.count = +d.count;
             d.decade = +d.decade;
         });
-    });
+    });*/
     console.log(data);
 });
