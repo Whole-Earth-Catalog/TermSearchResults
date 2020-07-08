@@ -28,7 +28,15 @@ with open("keys_by_decade.json") as f:
 	    except KeyError as e:
 		clean_data.update({term_key: [datapoints]}) 
     #print(clean_data) 
+def datapoints_to_str(datapoints):
+	dp_str = "["
+	for term_dict in datapoints:
+	    dp_str = dp_str + "{\"decade\" : " + str(term_dict['decade']) + ", \"count\" : " + str(term_dict['count']) + "},"
+	dp_str = dp_str[:len(dp_str)-1] + "]"
+	return dp_str
 # write clean data to json file
 with open('clean_key_data.json', 'w') as f:
+    f.write("{\n")
     for key in clean_data:
-	f.write("{\"term_key\" : \"" + key + "\", \"datapoints\" : " + str(clean_data[key]) + "}")
+	f.write("{\"term_key\" : \"" + key + "\", \"datapoints\" : " + datapoints_to_str(clean_data[key]) + "}\n")
+    f.write("}")
