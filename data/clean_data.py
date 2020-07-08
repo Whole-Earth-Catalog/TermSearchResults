@@ -38,5 +38,5 @@ def datapoints_to_str(datapoints):
 with open('clean_key_data.json', 'w') as f:
     f.write("{\n")
     for key in clean_data:
-	f.write("{\"term_key\" : \"" + key + "\", \"datapoints\" : " + datapoints_to_str(clean_data[key]) + "}\n")
+	f.write("{\"term_key\" : \"" + key + "\", \"datapoints\" : " + datapoints_to_str(clean_data[key]) + "},\n")
     f.write("}")
