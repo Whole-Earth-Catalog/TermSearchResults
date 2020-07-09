@@ -31,7 +31,7 @@ function add_option(term){
 }
 
 // Define margins
-var margin = { top: 50, right: 100, bottom: 100, left: 80 },
+var margin = { top: 50, right: 100, bottom: 100, left: 120 },
     width =
         parseInt(d3.select("#chart").style("width")) - margin.left - margin.right,
     height =
@@ -95,12 +95,20 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
     yScale.domain(d3.extent(data, function (d) {
         return d.num_ids;
     }));
+    // add x axis
     svg
         .append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
         .call(xAxis);
-
+    // text label for the x axis
+    svg.append("text")
+        .attr("transform",
+            "translate(" + (width / 2) + " ," +
+            (height + margin.top + 20) + ")")
+        .style("text-anchor", "middle")
+        .text("Decade");
+    // add y axis
     svg
         .append("g")
         .attr("class", "y axis")
@@ -112,6 +120,14 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
         .attr("dx", ".71em")
         .style("text-anchor", "beginning")
         .text("number of titles");
+    // text label for the y axis
+    svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 29 - margin.left)
+        .attr("x", 0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Number of Titles with Term");  
     
     function update(selected_term_keys) {
         console.log("updating...");
