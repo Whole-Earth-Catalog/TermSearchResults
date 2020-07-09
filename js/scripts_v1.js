@@ -87,7 +87,6 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
         console.log(key_data)
         return key_data
     }
-    var key_data = clean_data(term_keys)
     all_term_keys.forEach(add_option);
     // set domain of axes
     xScale.domain(d3.extent(data, function (d) {
@@ -113,37 +112,33 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
         .attr("dx", ".71em")
         .style("text-anchor", "beginning")
         .text("number of titles");
-    var key_lines = svg
-        .selectAll(".term_key")
-        .data(key_data)
-        .enter()
-        .append("g")
-        .attr("class", "term_key");
-    key_lines
-        .append("path")
-        .attr("d", function (d) {
-            return line(d.datapoints);
-        })
-        .style("stroke", function (d) {
-            return color(d.term_key);
-        })
-        .attr("fill", "none");
+    
     function update(selected_term_keys) {
+        console.log("updating...");
         var new_key_data = clean_data(selected_term_keys);
-        key_lines
+        svg.selectAll(".line").remove();
+        var key_lines = svg
+            .selectAll(".line")
             .data(new_key_data)
             .enter()
-            .transition()
+            .append("g")
+            .attr("class", "line");
+        key_lines
+            .append("path")
             .attr("d", function (d) {
                 return line(d.datapoints);
             })
             .style("stroke", function (d) {
                 return color(d.term_key);
-            });
+            })
+            .attr("fill", "none");
+        
     }
+    update(term_keys)
     var new_list = ['violence', 'state']
     document.getElementById("update_button").addEventListener("click", function () {
         console.log("button pushed!")
+        document.getElementById("key_options")
         update(new_list)
     })
 });

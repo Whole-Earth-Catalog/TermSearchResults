@@ -1,3 +1,4 @@
+console.log("Start.")
 // Define margins
 var margin = { top: 50, right: 100, bottom: 100, left: 80 },
     width =
@@ -16,10 +17,10 @@ var line = d3
     .line()
     .curve(d3.curveMonotoneX)
     .x(function (d) {
-        return xScale(d.decade)
+        return xScale(d['decade'])
     })
     .y(function (d) {
-        return yScale(d.count)
+        return yScale(d['count'])
     });
 // Define svg canvas
 var svg = d3
@@ -29,15 +30,55 @@ var svg = d3
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 // open data
-d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/clean_key_data.json", function (data) {
+d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/clean_key_data.json").then(function (data) {
+    console.log("d3 opened json")
     all_term_keys = [];
     // format data 
-    /*data.forEach(function (row) {
+    data.forEach(function (row) {
         all_term_keys.push(row.term_key)
         row.datapoints.forEach(function (d) {
             d.count = +d.count;
             d.decade = +d.decade;
         });
-    });*/
+    });
     console.log(data);
+    xScale.domain(d3.extent(data, function (d) {
+        return d.datapoints['decade'];
+    }));
+    yScale.domain(d3.extent(data, function (d) {
+        return d.datapoints['num_ids'];
+    }));
+    svg
+        .append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    svg
+        .append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("class", "label")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .attr("dx", ".71em")
+        .style("text-anchor", "beginning")
+        .text("number of titles");
+    var key_lines = svg
+        .selectAll(".term_key")
+        .data(data)
+        .enter()
+        .append("g")
+        .attr("class", "term_key");
+    key_lines
+        .append("path")
+        .attr("d", function (d) {
+            return line(d.datapoints);
+        })
+        .style("stroke", function (d) {
+            return color(d.term_key);
+        })
+        .attr("fill", "none");
+    console.log(data)
 });
