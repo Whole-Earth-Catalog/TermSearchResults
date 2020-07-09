@@ -135,10 +135,24 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
         
     }
     update(term_keys)
-    var new_list = ['violence', 'state']
+    
     document.getElementById("update_button").addEventListener("click", function () {
         console.log("button pushed!")
-        document.getElementById("key_options")
+        var new_list = []
+        var boxes = document.getElementById("key_options")
+        var boxes_checked = []
+        for (var i = 0; i < boxes.length; i++) {
+            if (boxes[i].checked) {
+                console.log(boxes[i].value)
+                boxes_checked.push(boxes[i].value);
+            }
+        }
+        if (boxes_checked[0] == "AllTerms") {
+            new_list = term_keys
+        } else {
+            new_list = boxes_checked
+        }
+        console.log(new_list)
         update(new_list)
     })
 });

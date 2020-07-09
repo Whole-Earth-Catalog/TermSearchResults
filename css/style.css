@@ -25,7 +25,7 @@ h1, .row {
 }
 #key_options {
     margin-left: 10%;
-    columns: 4;
-    -webkit-columns: 4;
-    -moz-columns: 4;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
 }
