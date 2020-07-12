@@ -27,16 +27,31 @@
             
         </div>
         <div class="col-sm-3">
-            scale thing goes here
+            <form id="title_range">
+                <label for="count">Edit axes</label>
+                <input type="range" id="count" name="count" min="100" max="25000" value="25000" onchange="update_title_range(this.value)" />
+                <input id="count_value" value="25000" onchange="update_count_text(this.value)" /> titles
+            </form>
+            <br />
+            <form id="decade_range">
+                <label for="min_decade">Min Decade</label>
+                <input type="text" id="min_decade" value="1500" />
+                <p id="min_decade_text">Enter value between 1500 and 1800</p>
+                <label for="max_decade">Max Decade</label>
+                <input type="text" id="max_decade" value="1800" />
+                <p id="min_decade_text">Enter value between 1500 and 1800</p>
+            </form>
         </div>
         <div class="col-sm-3">
             <button id="update_button">Update</button>
+            <br /><br />
+            <button id="reset_button">Reset</button>
         </div>
     </div>
     <svg id="chart"></svg>
 
     <script src="https://d3js.org/d3.v5.js"></script>
-    <script src="js/scripts_v1.js"></script>
+    <script src="js/scripts.js"></script>
 
 
 </body>
