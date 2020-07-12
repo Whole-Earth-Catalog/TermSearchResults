@@ -1,8 +1,8 @@
 body {
     font: 10px;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: "Times New Roman", Times, serif;
 }
-h1, .row {
+h1, p {
     font: 40px;
     text-align: center;
 }
@@ -28,4 +28,15 @@ h1, .row {
     columns: 3;
     -webkit-columns: 3;
     -moz-columns: 3;
+}
+.term_label {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: left;
+}
+#buttons {
+    text-align: center;
+}
+#update_button {
+    fill: blue;
 }

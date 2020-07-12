@@ -1,6 +1,6 @@
-console.log("Beginning js script 8:37")
+console.log("Beginning js script")
 // Get list of all term keys from json
-var all_term_keys = Array(20)
+var all_term_keys = []
 $.getJSON("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/keys_by_decade.json", function (data) {
     // console.log("in json")
     var index = 0;
@@ -11,23 +11,44 @@ $.getJSON("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResul
         }
     });
 });
-console.log(all_term_keys)
-// Create form with label for each term key
-var form = document.getElementById("key_options");
+// console.log(all_term_keys)
 
-function add_option(term){
-    console.log("adding option")
+// function to add checkbox/legend option for a given term
+function add_option(term) {
+    // get form object
+    var form = document.getElementById("key_options");
+    // console.log("adding option")
+    // add input tag 
     var new_key_input = document.createElement("INPUT");
     new_key_input.id = term + "Option"
     new_key_input.type = "checkbox";
     new_key_input.name = "dataset";
     new_key_input.value = term;
+    // add label tag
     var key_label = document.createElement("LABEL");
+    key_label.className = "term_label"
     key_label.htmlFor = term + "Option"
-    key_label.innerHTML = term + " ";
+    key_label.innerHTML = term[0].toUpperCase() + term.slice(1);
+    // create svg for rectangle
+    var ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg');
+    svg.setAttributeNS(null, 'width', '15px')
+    svg.setAttributeNS(null, 'height', '15px');
+    // create rectangle
+    var color_rect = document.createElementNS(ns, 'rect');
+    color_rect.setAttributeNS(null, 'width', '15px')
+    color_rect.setAttributeNS(null, 'height', '15px')
+    color_rect.setAttributeNS(null, 'fill', color(term))
+    // add rectangle as child of svg
+    svg.appendChild(color_rect)
+    // insert break at the end of the form
     form.insertBefore(document.createElement("BR"), null);
-    form.insertBefore(new_key_input, null);
-    form.insertBefore(key_label, new_key_input)
+    //insert svg before the end of the form
+    form.insertBefore(svg, null)
+    // insert label before svg
+    form.insertBefore(key_label, svg);
+    // insert check box before label
+    form.insertBefore(new_key_input, key_label)
 }
 
 // Define margins
@@ -39,7 +60,7 @@ var margin = { top: 50, right: 100, bottom: 100, left: 120 },
 // Define scales
 var xScale = d3.scaleLinear().range([0, width]);
 var yScale = d3.scaleLinear().range([height, 0]);
-var color = d3.scaleOrdinal().range(d3.schemeCategory10);
+var color = d3.scaleOrdinal().range(["#1cd61c", "#9511fc", "#d01301", "#15c7ff", "#6b6b2f", "#a34588", "#f7a90b", "#22d19e", "#0461df", "#faa293", "#aec333", "#63677a", "#c2adf9", "#ce0256", "#b612b7", "#a6bfa7"]);
 // Define axes
 var xAxis = d3.axisBottom().scale(xScale).tickFormat(d3.format('d'));
 var yAxis = d3.axisLeft().scale(yScale);
@@ -61,39 +82,41 @@ var svg = d3
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-
 // Draw graph from json
 d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/keys_by_decade.json").then(function (data) {
-    var stan_max_titles = 25000;
+    var stan_max_titles = 25000; 
     var stan_min_decade = 1500;
     var stan_max_decade = 1800;
-    var term_keys = all_term_keys
-    console.log("reading from json...")
+    var term_keys = all_term_keys;
+    // console.log("reading from json...")
+    // add options to check box form
+    all_term_keys.forEach(add_option);
     // set color domain
-    color.domain(term_keys)
-    // format data
+    color.domain(term_keys);
+    // format data types
     data.forEach(function (d) {
-        d.decade = Number(d.decade)
-        d.num_ids = +d.num_ids
+        d.decade = Number(d.decade);
+        d.num_ids = +d.num_ids;
     });
-    // get data only from selected terms and decades
+    // function to get data only from selected terms and decades in a useful structure
     function clean_data(term_key_list, min_decade, max_decade) {
-        var key_data = []
+        var key_data = [];
+        // iterate through given term keys
         term_key_list.forEach(function (key) {
-            datapoints = []
+            datapoints = [];
+            // iterate through data and push rows matching the term and decade
             data.forEach(function (item) {
                 if (key == item.term_key && !isNaN(item.decade)
                     && item.decade >= min_decade && item.decade <= max_decade) {
-                    datapoints.push({ "decade": item.decade, "count": item.num_ids })
+                    datapoints.push({ "decade": item.decade, "count": item.num_ids });
                 }
             })
-            key_data.push({ "term_key": key, "datapoints": datapoints })
+            // push data for each term key to the clean dictionary
+            key_data.push({ "term_key": key, "datapoints": datapoints });
         })
-        console.log(key_data)
-        return key_data
+        console.log(key_data);
+        return key_data;
     }
-    // add options to check box form
-    all_term_keys.forEach(add_option);
     
     // function to draw graph based on selected term keys and scales
     function update(selected_term_keys) {
@@ -125,23 +148,25 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
             .style("text-anchor", "middle")
             .text("Number of Titles with Term");
         // get value for x axis domain
-        var min_decade = document.getElementById('min_decade').value
-        var max_decade = document.getElementById('max_decade').value
+        var min_decade = document.getElementById('min_decade').value;
+        var max_decade = document.getElementById('max_decade').value;
         // check if min_decade value is between 1500-1800
         if (min_decade > stan_max_decade || min_decade < stan_min_decade) {
-            min_decade = stan_min_decade
-            document.getElementById('min_decade_text').innerHTML = "invalid: enter decade between 1500 and 1800"
+            min_decade = stan_min_decade;
+            document.getElementById('min_decade_text').innerHTML = "INVALID: enter decade between 1500 and 1800";
         }
         // check if max_decade value is between 1500-1800
         if (max_decade > stan_max_decade || max_decade < stan_min_decade) {
-            max_decade = stan_max_decade
-            document.getElementById('max_decade_text').innerHTML = "invalid: enter decade between 1500 and 1800"
+            max_decade = stan_max_decade;
+            document.getElementById('max_decade_text').innerHTML = "INVALID: enter decade between 1500 and 1800";
         }
         // check if max_decade is less than or equal min_decade 
         if (max_decade <= min_decade) {
-            min_decade = stan_min_decade
-            max_decade = stan_max_decade
-            document.getElementById('max_decade_text').innerHTML = "invalid: enter decade greater than min decade"
+            min_decade = stan_min_decade;
+            max_decade = stan_max_decade;
+            document.getElementById('max_decade_text').innerHTML = "INVALID: enter decade greater than min decade";
+        } else {
+            document.getElementById('max_decade_text').innerHTML = "Enter value between 1500 and 1800";
         }
         // update x scale domain
         xScale.domain([min_decade, max_decade]);
@@ -180,36 +205,49 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
                 return color(d.term_key);
             })
             .attr("fill", "none");
-        
     }
-    
+    // handle update button
     document.getElementById("update_button").addEventListener("click", function () {
-        console.log("update button pushed!")
+        // console.log("update button pushed!")
         var new_list = []
         var boxes = document.getElementById("key_options")
+        // get a list of all check boxes
         var boxes_checked = []
         for (var i = 0; i < boxes.length; i++) {
             if (boxes[i].checked) {
-                console.log(boxes[i].value)
+                // console.log(boxes[i].value)
                 boxes_checked.push(boxes[i].value);
             }
         }
-        if (boxes_checked[0] == "AllTerms") {
+        // if all terms is checked then the list should have all of the terms
+        if (boxes_checked[0] == "AllTerms" || boxes_checked.length == 0) {
             new_list = term_keys;
         } else {
+            // only the checked terms are passed in the update
             new_list = boxes_checked;
         }
-        console.log(new_list);
+        //console.log(new_list);
         update(new_list);
     });
+    // handle reset button
     document.getElementById("reset_button").addEventListener("click", function () {
         // update range for count
         update_title_range(stan_max_titles);
         // update text box for count
         update_count_text(stan_max_titles);
-
+        // update min_decade and max_decade
+        document.getElementById('min_decade').value = stan_min_decade;
+        document.getElementById('max_decade').value = stan_max_decade;
+        // update select boxes
+        var select_boxes = document.getElementById("key_options");
+        for (var i = 0; i < select_boxes.length; i++) {
+            select_boxes[i].checked = false;
+        }
+        select_boxes[0].checked = true;
+        // draw new graph
         update(term_keys);
     });
+    // draw first graph
     update(term_keys);
 });
 // update value in text box when range input is edited

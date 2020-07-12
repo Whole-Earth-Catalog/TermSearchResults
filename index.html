@@ -19,16 +19,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <div class="row" id="options">
-        <div class="col-sm-6">
+        <div class="col-sm-6 edit">
+            <p>Select Terms</p>
             <form id="key_options" name="key_options">
-                <label for="AllTermsOption">All Terms</label>
                 <input id="AllTermOption" type="checkbox" name="dataset" value="AllTerms" checked>
+                <label class="term_label" for="AllTermsOption">All Terms</label>            
             </form>
             
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 edit">
+            <p>Edit Axes</p>
             <form id="title_range">
-                <label for="count">Edit axes</label>
+                <label for="count">Edit Y Axis</label>
                 <input type="range" id="count" name="count" min="100" max="25000" value="25000" onchange="update_title_range(this.value)" />
                 <input id="count_value" value="25000" onchange="update_count_text(this.value)" /> titles
             </form>
@@ -39,10 +41,11 @@
                 <p id="min_decade_text">Enter value between 1500 and 1800</p>
                 <label for="max_decade">Max Decade</label>
                 <input type="text" id="max_decade" value="1800" />
-                <p id="min_decade_text">Enter value between 1500 and 1800</p>
+                <p id="max_decade_text">Enter value between 1500 and 1800</p>
             </form>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 edit" id="buttons">
+            <br /><br /><br />
             <button id="update_button">Update</button>
             <br /><br />
             <button id="reset_button">Reset</button>
