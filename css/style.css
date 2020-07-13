@@ -2,7 +2,7 @@ body {
     font: 10px;
     font-family: "Times New Roman", Times, serif;
 }
-h1, p {
+h1, p, h3 {
     font: 40px;
     text-align: center;
 }
@@ -37,6 +37,9 @@ h1, p {
 #buttons {
     text-align: center;
 }
-#update_button {
-    fill: blue;
+#edit-axes {
+    background-color: lightblue;
+}
+#options {
+    background-color: lightgoldenrodyellow;
 }
