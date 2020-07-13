@@ -8,13 +8,16 @@
     <meta name="description" content="term search results">
     <meta name="author" content="Vasco Madrid">
 
-    <link rel="stylesheet" href="css/style.css?v=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
 <body>
+    <div class="row" id="header">
+       ------- Whole Earth Book Catalog Logitudinal Analysis ---------------------------
+    </div>
     <h1>Results of Term Search on Publications from 1500 to 1800</h1>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -25,7 +28,6 @@
                 <input id="AllTermOption" type="checkbox" name="dataset" value="AllTerms" checked>
                 <label class="term_label" for="AllTermsOption">All Terms</label>            
             </form>
-            
         </div>
         <div class="col-sm-3 edit" id="edit-axes">
             <h3>Edit Axes</h3>
@@ -45,10 +47,11 @@
             </form>
         </div>
         <div class="col-sm-3 edit" id="buttons">
-            <br /><br /><br />
-            <button id="update_button">Update</button>
             <br /><br />
-            <button id="reset_button">Reset</button>
+            <button id="update_button" class="button">Update</button>
+            <br /><br />
+            <button id="reset_button" class="button">Reset</button>
+            <br /><br />
         </div>
     </div>
     <svg id="chart"></svg>
