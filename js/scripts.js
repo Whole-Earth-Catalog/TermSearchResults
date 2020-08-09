@@ -99,7 +99,7 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
         d.num_ids = +d.num_ids;
     });
     // function to get data only from selected terms and decades in a useful structure
-    function clean_data(term_key_list, min_decade, max_decade) {
+    function clean_data(term_key_list, min_decade, max_decade, lang) {
         var key_data = [];
         // iterate through given term keys
         term_key_list.forEach(function (key) {
@@ -107,8 +107,19 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
             // iterate through data and push rows matching the term and decade
             data.forEach(function (item) {
                 if (key == item.term_key && !isNaN(item.decade)
-                    && item.decade >= min_decade && item.decade <= max_decade) {
-                    datapoints.push({ "decade": item.decade, "count": item.num_ids });
+                    && item.decade >= min_decade && item.decade <= max_decade
+                    && (item.language == lang || lang == "All Languages")) {
+                    inDatapoints = false
+                    datapoints.forEach(function (datapoint) {
+                        // console.log(datapoint.decade)
+                        if (datapoint["decade"] == item.decade) {
+                            datapoint["count"] += item.num_ids
+                            inDatapoints = true
+                        }
+                    });
+                    if (!inDatapoints) {
+                        datapoints.push({ "decade": item.decade, "count": item.num_ids });
+                    }
                 }
             })
             // push data for each term key to the clean dictionary
@@ -185,8 +196,11 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
                 (height + margin.top) + ")")
             .style("text-anchor", "middle")
             .text("Decade");
+        // get chosen language
+        var select_lang = document.getElementById("languages");
+        var chosen_lang = select_lang.options[select_lang.selectedIndex].value;
         // get new data
-        var new_key_data = clean_data(selected_term_keys, min_decade, max_decade);
+        var new_key_data = clean_data(selected_term_keys, min_decade, max_decade, chosen_lang);
         // remove old lines
         svg.selectAll(".line").remove();
         // add new lines

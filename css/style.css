@@ -70,6 +70,9 @@ h3 {
 #reset_button {
     background-color: darkolivegreen;
 }
+#lang_options {
+    text-align: center;
+}
 .edit {
     padding: 20px;
     
