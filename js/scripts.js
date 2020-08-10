@@ -1,17 +1,4 @@
 console.log("Beginning js script")
-// Get list of all term keys from json
-var all_term_keys = []
-$.getJSON("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/keys_by_decade.json", function (data) {
-    // console.log("in json")
-    var index = 0;
-    $.each(data, function (i, d) {
-        if ($.inArray(d.term_key, all_term_keys) === -1) {
-            all_term_keys[index] = d.term_key;
-            index++;
-        }
-    });
-});
-// console.log(all_term_keys)
 
 // function to add checkbox/legend option for a given term
 function add_option(term) {
@@ -61,6 +48,7 @@ var margin = { top: 50, right: 100, bottom: 100, left: 120 },
 var xScale = d3.scaleLinear().range([0, width]);
 var yScale = d3.scaleLinear().range([height, 0]);
 var color = d3.scaleOrdinal().range(["#1cd61c", "#9511fc", "#d01301", "#15c7ff", "#6b6b2f", "#a34588", "#f7a90b", "#22d19e", "#0461df", "#faa293", "#aec333", "#63677a", "#c2adf9", "#ce0256", "#b612b7", "#a6bfa7"]);
+var common_color = d3.scaleOrdinal().range(["#000000"]);
 // Define axes
 var xAxis = d3.axisBottom().scale(xScale).tickFormat(d3.format('d'));
 var yAxis = d3.axisLeft().scale(yScale);
@@ -83,50 +71,85 @@ var svg = d3
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Draw graph from json
-d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults/master/data/keys_by_decade.json").then(function (data) {
+d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/master/build/LanguageMatrix/data.tsv").then(function (data) {
     var stan_max_titles = 25000; 
     var stan_min_decade = 1500;
     var stan_max_decade = 1800;
-    var term_keys = all_term_keys;
-    // console.log("reading from json...")
-    // add options to check box form
-    all_term_keys.forEach(add_option);
+
+    var all_term_keys = [];
+    var all_common_terms = [];
+    data.forEach(function (item) {
+        if (item.type == "search_term" && !all_term_keys.includes(item.term)) {
+            all_term_keys.push(item.term)
+        } else if (item.type == "common_term" && !all_common_terms.includes(item.term)) {
+            all_common_terms.push(item.term)
+        }
+    })
+
+    all_term_keys.forEach(add_option)
     // set color domain
-    color.domain(term_keys);
+    color.domain(all_term_keys);
     // format data types
     data.forEach(function (d) {
         d.decade = Number(d.decade);
-        d.num_ids = +d.num_ids;
+        d.count = +d.count;
     });
     // function to get data only from selected terms and decades in a useful structure
-    function clean_data(term_key_list, min_decade, max_decade, lang) {
+    function clean_key_data(term_key_list, min_decade, max_decade, lang) {
         var key_data = [];
         // iterate through given term keys
         term_key_list.forEach(function (key) {
             datapoints = [];
             // iterate through data and push rows matching the term and decade
             data.forEach(function (item) {
-                if (key == item.term_key && !isNaN(item.decade)
+                if (key == item.term && !isNaN(item.decade)
                     && item.decade >= min_decade && item.decade <= max_decade
                     && (item.language == lang || lang == "All Languages")) {
                     inDatapoints = false
                     datapoints.forEach(function (datapoint) {
                         // console.log(datapoint.decade)
                         if (datapoint["decade"] == item.decade) {
-                            datapoint["count"] += item.num_ids
+                            datapoint["count"] += item.count
                             inDatapoints = true
                         }
                     });
                     if (!inDatapoints) {
-                        datapoints.push({ "decade": item.decade, "count": item.num_ids });
+                        datapoints.push({ "decade": item.decade, "count": item.count });
                     }
                 }
             })
             // push data for each term key to the clean dictionary
-            key_data.push({ "term_key": key, "datapoints": datapoints });
+            key_data.push({ "term": key, "type":"search_term", "datapoints": datapoints });
         })
         console.log(key_data);
         return key_data;
+    } 
+    function clean_common_term_data(common_terms, min_decade, max_decade, lang) {
+        var common_data = [];
+        common_terms.forEach(function (term) {
+            datapoints = [];
+            data.forEach(function (item) {
+                if (item.term == term && !isNaN(item.decade)
+                    && item.decade >= min_decade && item.decade <= max_decade
+                    && item.language == lang) {
+                    inDatapoints = false;
+                    datapoints.forEach(function (datapoint) {
+                        // console.log(datapoint.decade)
+                        if (datapoint["decade"] == item.decade) {
+                            datapoint["count"] += item.count;
+                            inDatapoints = true;
+                        }
+                    });
+                    if (!inDatapoints) {
+                        datapoints.push({ "decade": item.decade, "count": item.count });
+                    }
+                }
+            });
+            if (datapoints.length > 0) {
+                common_data.push({ "term": term, "type":"common_term", "datapoints": datapoints });
+            }
+        });
+        return common_data;
     }
     
     // function to draw graph based on selected term keys and scales
@@ -200,23 +223,31 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
         var select_lang = document.getElementById("languages");
         var chosen_lang = select_lang.options[select_lang.selectedIndex].value;
         // get new data
-        var new_key_data = clean_data(selected_term_keys, min_decade, max_decade, chosen_lang);
+        var new_key_data = clean_key_data(selected_term_keys, min_decade, max_decade, chosen_lang);
+        var new_common_data = clean_common_term_data(all_common_terms, min_decade, max_decade, chosen_lang);
+        var new_data = new_key_data.concat(new_common_data);
         // remove old lines
         svg.selectAll(".line").remove();
         // add new lines
-        var key_lines = svg
+        var all_lines = svg
             .selectAll(".line")
-            .data(new_key_data)
+            .data(new_data)
             .enter()
             .append("g")
             .attr("class", "line");
-        key_lines
+        all_lines
             .append("path")
             .attr("d", function (d) {
                 return line(d.datapoints);
             })
             .style("stroke", function (d) {
-                return color(d.term_key);
+                var line_color = ""
+                if (d.type == "search_term") {
+                    line_color = color(d.term)
+                } else {
+                    line_color = common_color(d.term)
+                }
+                return line_color;
             })
             .attr("fill", "none");
     }
@@ -235,7 +266,7 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
         }
         // if all terms is checked then the list should have all of the terms
         if (boxes_checked[0] == "AllTerms" || boxes_checked.length == 0) {
-            new_list = term_keys;
+            new_list = all_term_keys;
         } else {
             // only the checked terms are passed in the update
             new_list = boxes_checked;
@@ -259,10 +290,10 @@ d3.json("https://raw.githubusercontent.com/Whole-Earth-Catalog/TermSearchResults
         }
         select_boxes[0].checked = true;
         // draw new graph
-        update(term_keys);
+        update(all_term_keys);
     });
     // draw first graph
-    update(term_keys);
+    update(all_term_keys);
 });
 // update value in text box when range input is edited
 function update_title_range(val) {
