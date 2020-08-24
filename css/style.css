@@ -77,3 +77,13 @@ h3 {
     padding: 20px;
     
 }
+.solid {
+    stroke: solid;
+}
+
+.dashed {
+    stroke-dasharray: 5,5;
+}
+p {
+    text-align: center;
+}

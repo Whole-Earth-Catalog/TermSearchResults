@@ -47,7 +47,7 @@ var margin = { top: 50, right: 100, bottom: 100, left: 120 },
 // Define scales
 var xScale = d3.scaleLinear().range([0, width]);
 var yScale = d3.scaleLinear().range([height, 0]);
-var color = d3.scaleOrdinal().range(["#1cd61c", "#9511fc", "#d01301", "#15c7ff", "#6b6b2f", "#a34588", "#f7a90b", "#22d19e", "#0461df", "#faa293", "#aec333", "#63677a", "#c2adf9", "#ce0256", "#b612b7", "#a6bfa7"]);
+var color = d3.scaleOrdinal().range(["#0461df", "#faa293", "#aec333", "#1cd61c", "#9511fc", "#d01301", "#15c7ff", "#6b6b2f", "#a34588", "#f7a90b", "#22d19e", "#63677a", "#c2adf9", "#ce0256", "#b612b7", "#a6bfa7"]);
 var common_color = d3.scaleOrdinal().range(["#000000"]);
 // Define axes
 var xAxis = d3.axisBottom().scale(xScale).tickFormat(d3.format('d'));
@@ -71,8 +71,8 @@ var svg = d3
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Draw graph from json
-d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/master/build/LanguageMatrix/data.tsv").then(function (data) {
-    var stan_max_titles = 25000; 
+d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/master/update_graph/data.tsv").then(function (data) {
+    var stan_max_titles = 45000; 
     var stan_min_decade = 1500;
     var stan_max_decade = 1800;
 
@@ -118,8 +118,13 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
                     }
                 }
             })
+            // organize datapoints
+            datapoints.sort(function (a, b) {
+                return a.decade - b.decade;
+            })
             // push data for each term key to the clean dictionary
-            key_data.push({ "term": key, "type":"search_term", "datapoints": datapoints });
+            key_data.push({ "term": key, "type": "search_term", "datapoints": datapoints });
+ 
         })
         console.log(key_data);
         return key_data;
@@ -131,7 +136,7 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
             data.forEach(function (item) {
                 if (item.term == term && !isNaN(item.decade)
                     && item.decade >= min_decade && item.decade <= max_decade
-                    && item.language == lang) {
+                    && (item.language == lang || lang == "All Languages")) {
                     inDatapoints = false;
                     datapoints.forEach(function (datapoint) {
                         // console.log(datapoint.decade)
@@ -248,6 +253,20 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
                     line_color = common_color(d.term)
                 }
                 return line_color;
+            })
+            .attr("stroke-width", function (d) {
+                var stroke_width = 3;
+                if (d.type == "common_term") {
+                    stroke_width = 5
+                }
+                return stroke_width;
+            })
+            .attr('class', function (d) {
+                if (d.type == "common_term") { 
+                    return 'dashed';
+                } else {
+                    return 'solid'
+                }
             })
             .attr("fill", "none");
     }
