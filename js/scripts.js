@@ -71,7 +71,7 @@ var svg = d3
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // Draw graph from json
-d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/master/update_graph/data.tsv").then(function (data) {
+d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/2ab0bf764b2102100d61cef49f9712032eb0a562/update_graph/data.tsv").then(function (data) {
     var stan_max_titles = 30000; 
     var stan_min_decade = 1500;
     var stan_max_decade = 1800;
