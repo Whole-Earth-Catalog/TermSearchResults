@@ -173,7 +173,7 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
             max_decade = stan_max_decade;
             document.getElementById('max_decade_text').innerHTML = "INVALID: enter decade greater than min decade";
         } else {
-            document.getElementById('max_decade_text').innerHTML = "Enter value between 1500 and 1800";
+            document.getElementById('max_decade_text').innerHTML = "Enter value between 1500 and 1800, greater than min decade";
         }
         // update x scale domain
         xScale.domain([min_decade, max_decade]);
