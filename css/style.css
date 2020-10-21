@@ -4,6 +4,12 @@ body {
     font-variant: small-caps;
     font-size: 16px;
 }
+
+.line {
+    fill: none;
+    stroke-width: 5px;
+}
+
 #header {
     background-color: lightgrey;
     text-align: left;
@@ -18,14 +24,9 @@ h3 {
 .axis path,
 .axis line {
     fill: none;
-    stroke: #000;
 }
 
-.line {
-    fill: none;
-    stroke: steelblue;
-    stroke-width: 5px;
-}
+
 
 #chart {
     width: 100%;
@@ -77,13 +78,7 @@ h3 {
     padding: 20px;
     
 }
-.solid {
-    stroke: solid;
-}
 
-.dashed {
-    stroke-dasharray: 5,5;
-}
 p {
     text-align: center;
 }

@@ -214,10 +214,6 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
             .style("stroke", function (d) {
                 return color(d.term)
             })
-            .attr("stroke-width", function (d) {
-                var stroke_width = 7;
-                return stroke_width;
-            })
             .attr("fill", "none");
     }
     // handle update button
