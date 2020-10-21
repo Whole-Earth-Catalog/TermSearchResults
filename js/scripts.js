@@ -48,10 +48,9 @@ var margin = { top: 50, right: 100, bottom: 100, left: 120 },
 var xScale = d3.scaleLinear().range([0, width]);
 var yScale = d3.scaleLinear().range([height, 0]);
 var color = d3.scaleOrdinal().range(["#0461df", "#faa293", "#aec333", "#1cd61c", "#9511fc", "#d01301", "#15c7ff", "#6b6b2f", "#a34588", "#f7a90b", "#22d19e", "#63677a", "#c2adf9", "#ce0256", "#b612b7", "#a6bfa7"]);
-var common_color = d3.scaleOrdinal().range(["#000000"]);
 // Define axes
 var xAxis = d3.axisBottom().scale(xScale).tickFormat(d3.format('d'));
-var yAxis = d3.axisLeft().scale(yScale);
+var yAxis = d3.axisLeft().scale(yScale).ticks(20).tickFormat(d3.format(".2%"));
 // Define lines
 var line = d3
     .line()
@@ -77,12 +76,9 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
     var stan_max_decade = 1800;
 
     var all_term_keys = [];
-    var all_common_terms = [];
     data.forEach(function (item) {
-        if (item.type == "search_term" && !all_term_keys.includes(item.term)) {
+        if (!all_term_keys.includes(item.term)) {
             all_term_keys.push(item.term)
-        } else if (item.type == "common_term" && !all_common_terms.includes(item.term)) {
-            all_common_terms.push(item.term)
         }
     })
 
@@ -129,39 +125,12 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
         console.log(key_data);
         return key_data;
     } 
-    function clean_common_term_data(common_terms, min_decade, max_decade, lang) {
-        var common_data = [];
-        common_terms.forEach(function (term) {
-            datapoints = [];
-            data.forEach(function (item) {
-                if (item.term == term && !isNaN(item.decade)
-                    && item.decade >= min_decade && item.decade <= max_decade
-                    && (item.language == lang || lang == "All Languages")) {
-                    inDatapoints = false;
-                    datapoints.forEach(function (datapoint) {
-                        // console.log(datapoint.decade)
-                        if (datapoint["decade"] == item.decade) {
-                            datapoint["count"] += item.count;
-                            inDatapoints = true;
-                        }
-                    });
-                    if (!inDatapoints) {
-                        datapoints.push({ "decade": item.decade, "count": item.count });
-                    }
-                }
-            });
-            if (datapoints.length > 0) {
-                common_data.push({ "term": term, "type":"common_term", "datapoints": datapoints });
-            }
-        });
-        return common_data;
-    }
     
     // function to draw graph based on selected term keys and scales
     function update(selected_term_keys) {
         console.log("updating...");
         // get value for y scale
-        var yMax = document.getElementById('count_value').value
+        var yMax = document.getElementById('count_value').value / 100
         // update domain of y scale
         yScale.domain([0, yMax]);
         // remove old y axis
@@ -177,7 +146,6 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
             .attr("dy", ".71em")
             .attr("dx", ".71em")
             .style("text-anchor", "beginning")
-            .text("number of titles");
         // text label for the y axis
         svg.append("text")
             .attr("transform", "rotate(-90)")
@@ -185,7 +153,7 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
             .attr("x", 0 - (height / 2))
             .attr("dy", "1em")
             .style("text-anchor", "middle")
-            .text("Number of Titles with Term");
+            .text("Percentage of Titles with Term");
         // get value for x axis domain
         var min_decade = document.getElementById('min_decade').value;
         var max_decade = document.getElementById('max_decade').value;
@@ -228,9 +196,7 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
         var select_lang = document.getElementById("languages");
         var chosen_lang = select_lang.options[select_lang.selectedIndex].value;
         // get new data
-        var new_key_data = clean_key_data(selected_term_keys, min_decade, max_decade, chosen_lang);
-        var new_common_data = clean_common_term_data(all_common_terms, min_decade, max_decade, chosen_lang);
-        var new_data = new_key_data.concat(new_common_data);
+        var new_data = clean_key_data(selected_term_keys, min_decade, max_decade, chosen_lang);
         // remove old lines
         svg.selectAll(".line").remove();
         // add new lines
@@ -246,27 +212,11 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
                 return line(d.datapoints);
             })
             .style("stroke", function (d) {
-                var line_color = ""
-                if (d.type == "search_term") {
-                    line_color = color(d.term)
-                } else {
-                    line_color = common_color(d.term)
-                }
-                return line_color;
+                return color(d.term)
             })
             .attr("stroke-width", function (d) {
                 var stroke_width = 3;
-                if (d.type == "common_term") {
-                    stroke_width = 5
-                }
                 return stroke_width;
-            })
-            .attr('class', function (d) {
-                if (d.type == "common_term") { 
-                    return 'dashed';
-                } else {
-                    return 'solid'
-                }
             })
             .attr("fill", "none");
     }
