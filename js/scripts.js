@@ -72,7 +72,7 @@ var svg = d3
 
 // Draw graph from json
 d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/master/update_graph/data.tsv").then(function (data) {
-    var stan_max_titles = 45000; 
+    var stan_max_titles = 30000; 
     var stan_min_decade = 1500;
     var stan_max_decade = 1800;
 
