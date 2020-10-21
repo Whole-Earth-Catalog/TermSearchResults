@@ -153,6 +153,7 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
             .attr("x", 0 - (height / 2))
             .attr("dy", "1em")
             .style("text-anchor", "middle")
+            .style("font-size", "20px")
             .text("Percentage of Titles with Term");
         // get value for x axis domain
         var min_decade = document.getElementById('min_decade').value;
@@ -191,6 +192,7 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
                 "translate(" + (width / 2) + " ," +
                 (height + margin.top) + ")")
             .style("text-anchor", "middle")
+            .style("font-size", "20px")
             .text("Decade");
         // get chosen language
         var select_lang = document.getElementById("languages");
