@@ -32,7 +32,7 @@
             <h3>Select Language</h3>
             <form id="lang_options" name="lang_options">
                 <select name="languages" id="languages">
-                    <option value="All Languages" selected>All Languages</option>
+                    <option value="all" selected>All Languages</option>
                     <option value="English">English</option>
                     <option value="Spanish">Spanish</option>
                     <option value="Italian">Italian</option>
@@ -47,8 +47,8 @@
             <h3>Edit Axes</h3>
             <form id="title_range">
                 <label for="count">Edit Y Axis</label>
-                <input type="range" id="count" name="count" min="1" max="100" value="30" onchange="update_title_range(this.value)" />
-                <input id="count_value" value="30" onchange="update_count_text(this.value)" /> % of titles
+                <input type="range" id="count" name="count" min="1" max="100" value="8" onchange="update_title_range(this.value)" />
+                <input id="count_value" value="8" onchange="update_count_text(this.value)" /> % of titles
             </form>
             <br />
             <form id="decade_range">

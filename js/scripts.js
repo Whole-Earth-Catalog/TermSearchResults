@@ -98,20 +98,12 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
             datapoints = [];
             // iterate through data and push rows matching the term and decade
             data.forEach(function (item) {
-                if (key == item.term && !isNaN(item.decade)
-                    && item.decade >= min_decade && item.decade <= max_decade
-                    && (item.language == lang || lang == "All Languages")) {
-                    inDatapoints = false
-                    datapoints.forEach(function (datapoint) {
-                        // console.log(datapoint.decade)
-                        if (datapoint["decade"] == item.decade) {
-                            datapoint["count"] += item.count
-                            inDatapoints = true
-                        }
-                    });
-                    if (!inDatapoints) {
-                        datapoints.push({ "decade": item.decade, "count": item.count });
-                    }
+                if (key == item.term
+                    && !isNaN(item.decade)
+                    && item.decade >= min_decade
+                    && item.decade <= max_decade
+                    && item.language == lang) {
+                    datapoints.push({ "decade": item.decade, "count": item.count/100 });
                 }
             })
             // organize datapoints
@@ -119,7 +111,7 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
                 return a.decade - b.decade;
             })
             // push data for each term key to the clean dictionary
-            key_data.push({ "term": key, "type": "search_term", "datapoints": datapoints });
+            key_data.push({ "term": key, "datapoints": datapoints });
  
         })
         console.log(key_data);
@@ -268,7 +260,12 @@ function update_title_range(val) {
 }
 // update value on range to match type input in text box
 function update_count_text(val) {
-    document.getElementById('count').value = val;
+    if (val <= 100) {
+        document.getElementById('count').value = val
+    } else {
+        update_title_range(8)
+        update_count_text(8)
+    }
 }
 
 console.log("end of script")
