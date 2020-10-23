@@ -248,6 +248,8 @@ d3.tsv("https://raw.githubusercontent.com/Whole-Earth-Catalog/WEBC-SQL-Scripts/m
             select_boxes[i].checked = false;
         }
         select_boxes[0].checked = true;
+        // update languages
+        document.getElementById('languages').value = "all"
         // draw new graph
         update(all_term_keys);
     });
