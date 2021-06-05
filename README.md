@@ -1,6 +1,7 @@
 # TermSearchResults
-Contains files for presentation of term search results done in the WEBC-SQL-Scripts repository
+Contains files for interactive web graph presentation of term frequency in publication records from 1500-1800
 
+Visit the graph:
 https://whole-earth-catalog.github.io/TermSearchResults/
 
-This is for Vasco's web graph. 
+
